@@ -16,6 +16,11 @@ def get_credential_fields_neat():
     return ','.join(get_credential_fields())
 
 if __name__ == '__main__':
+    if not os.path.isdir(f'{os.getcwd()}/data'):
+        os.mkdir(f'{os.getcwd()}/data')
+        os.mkdir(f'{os.getcwd()}/data/keys')
+        os.mkdir(f'{os.getcwd()}/data/salt')
+
     path_to_credentials = os.path.normpath(f'{os.getcwd()}/data/credentials.csv')
 
     with open(path_to_credentials,'w') as credentials_file:

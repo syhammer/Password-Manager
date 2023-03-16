@@ -9,7 +9,6 @@
     "nopy": "nopy",
     "npip": "npip",
     "save-password": "python scripts/save_password.py",
-    "create-password": "python scripts/create_password.py",
     "update-password": "python scripts/update_password.py",
     "get-password": "python scripts/get_password.py",
     "init": "python scripts/init.py"

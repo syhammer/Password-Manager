@@ -23,5 +23,8 @@ if __name__ == '__main__':
 
     path_to_credentials = os.path.normpath(f'{os.getcwd()}/data/credentials.csv')
 
-    with open(path_to_credentials,'w') as credentials_file:
-        credentials_file.write(get_credential_fields_neat()+'\n')
+    if not os.path.isfile(path_to_credentials):
+        with open(path_to_credentials,'w') as credentials_file:
+            credentials_file.write(get_credential_fields_neat()+'\n')
+
+    print('Initialized')

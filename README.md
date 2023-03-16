@@ -18,12 +18,14 @@ There are 3 preprogrammed operations that this script can do:
     npm run save-password
     ```
     This will allow you to input any password or have it generated. You can then tell the script what it's used for and what usernames go with it. Once those steps are completed, the password will be encrypted and archived.
+
 * Get a password
     In order to run this operation, you must enter the following:
     ```Batchfile
     npm run get-password
     ```
     This is how you access your passwords, as they are otherwise encrypted. You are given the option to search through your entire password archive. The search results are found based on password names, usernames, and unlocks.
+
 * Update a password
     In order to run this operation, you must enter the following:
     ```Batchfile

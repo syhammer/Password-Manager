@@ -1,0 +1,32 @@
+{
+  "name": "password-manager",
+  "version": "1.0.0",
+  "description": "Manages all of yor passwords nicely.",
+  "scripts": {
+    "nopenv": "nopenv",
+    "nopy": "nopy",
+    "npip": "npip",
+    "save-password": "python scripts/save_password.py",
+    "create-password": "python scripts/create_password.py",
+    "update-password": "python scripts/update_password.py",
+    "get-password": "python scripts/get_password.py",
+    "init": "python scripts/init.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syhammer/Password-Manager.git"
+  },
+  "keywords": [
+    "password",
+    "manager"
+  ],
+  "author": "Sylas Hamre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/syhammer/Password-Manager/issues"
+  },
+  "homepage": "https://github.com/syhammer/Password-Manager#readme",
+  "dependencies": {
+    "nopy": "^0.2.9"
+  }
+}

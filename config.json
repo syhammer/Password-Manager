@@ -1,0 +1,23 @@
+{
+  "format":{
+    "password_name":{
+      "allowed_chars":"1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_",
+      "replacer_char":"_"
+    },
+    "generated_password":{
+      "allowed_chars":"1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()[]{}_+-=,./<>?;':\"\\~`",
+      "replacer_char":"_"
+    }
+  },
+  "credentials":{
+    "csv":{
+      "fields":[
+        "name",
+        "password",
+        "path_to_key",
+        "usernames",
+        "unlocks"
+      ]
+    }
+  }
+}

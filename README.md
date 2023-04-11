@@ -32,3 +32,5 @@ There are 3 preprogrammed operations that this script can do:
     npm run update-password
     ```
     You can update a password's username and unlocks. For instance, you could use this password for a new account, update your password archive, and let it know about your new login.
+
+Alternatively, you can use the executables that are created during the initialization process. Currently, only Windows and Linux executables are supported.

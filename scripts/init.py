@@ -14,7 +14,11 @@ def get_config():
     with open(os.path.normpath(f'{super_path}/config.json')) as config_file:
         return json.load(config_file)
 
-data_path = get_config()['path']['data']
+def get_data_path():
+    path = get_config()['path']['data']
+    return os.path.normpath(path if path != "" else super_path+"/data")
+
+data_path = get_data_path()
 
 def get_credential_fields():
     return get_config()['credentials']['csv']['fields']

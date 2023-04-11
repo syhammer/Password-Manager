@@ -7,7 +7,7 @@ from scripts import init
 app_name = 'password-manager'
 super_path = app_name.join(os.path.normpath(os.path.realpath(__file__).lower()).split(app_name)[:-1])+app_name
 
-data_path = init.get_config()['path']['data']
+data_path = init.get_data_path()
 
 def is_name(name):
     with open(os.path.normpath(f'{data_path}/credentials.csv')) as csv_file:

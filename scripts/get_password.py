@@ -1,8 +1,13 @@
+#Get Password - PM
+
 import os
 import sys
 
+app_name = 'password-manager'
+super_path = app_name.join(os.path.normpath(os.path.realpath(__file__).lower()).split(app_name)[:-1])+app_name
+
 if __name__ == '__main__':
-    sys.path.insert(1,os.getcwd())
+    sys.path.insert(1,super_path)
 
     from utils.security import encryption
     from utils.security import credentials

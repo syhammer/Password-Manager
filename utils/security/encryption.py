@@ -7,24 +7,31 @@ from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
 import secrets
 import base64
 
+from scripts import init
+
+app_name = 'password-manager'
+super_path = app_name.join(os.path.normpath(os.path.realpath(__file__).lower()).split(app_name)[:-1])+app_name
+
+data_path = init.get_config()['path']['data']
+
 def generate_key(key_id,save=True):
     key = Fernet.generate_key()
 
     if save:
-        with open(os.path.normpath(f'{os.getcwd()}/data/keys/{key_id}.key'),'wb') as key_file:
+        with open(os.path.normpath(f'{data_path}/keys/{key_id}.key'),'wb') as key_file:
             key_file.write(key)
 
     return key
 
 def get_path_to_key(name):
-    return os.path.normpath(f'{os.getcwd()}/data/keys/{name}_key.key')
+    return os.path.normpath(f'{data_path}/keys/{name}_key.key')
 
 def set_key(key_id,key):
-    with open(os.path.normpath(f'{os.getcwd()}/data/keys/{key_id}.key'),'wb') as key_file:
+    with open(os.path.normpath(f'{data_path}/keys/{key_id}.key'),'wb') as key_file:
         key_file.write(key)
 
 def get_key(key_id):
-    path = os.path.normpath(f'{os.getcwd()}/data/keys/{key_id}.key')
+    path = os.path.normpath(f'{data_path}/keys/{key_id}.key')
 
     if os.path.isfile(path):
         with open(path,'rb') as key_file:
@@ -45,13 +52,13 @@ def generate_salt(salt_id,size=16,save=True):
     salt = secrets.token_bytes(size)
 
     if save:
-        with open(os.path.normpath(f'{os.getcwd()}/data/salt/{salt_id}.salt'),'wb') as salt_file:
+        with open(os.path.normpath(f'{data_path}/salt/{salt_id}.salt'),'wb') as salt_file:
             salt_file.write(salt)
 
     return salt
 
 def get_salt(salt_id):
-    path = os.path.normpath(f'{os.getcwd()}/data/salt/{salt_id}.salt')
+    path = os.path.normpath(f'{data_path}/salt/{salt_id}.salt')
 
     if os.path.isfile(path):
         with open(path, 'rb') as salt_file:

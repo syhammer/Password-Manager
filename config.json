@@ -19,5 +19,14 @@
         "unlocks"
       ]
     }
+  },
+  "os":{
+    "supported":[
+      "linux",
+      "windows"
+    ]
+  },
+  "path":{
+    "data":"Z:\\PasswordManager\\data"
   }
 }
